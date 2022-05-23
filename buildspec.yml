@@ -10,7 +10,6 @@ phases:
     on-failure: ABORT | CONTINUE
     commands:
       - echo Login in to ECR...
-      - ll
       - echo ${REPO_ECR}
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
